@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Historical Places in India</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         body {
@@ -18,7 +18,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 1000; /* Make sure it stays on top */
+            z-index: 1000;
             color: aliceblue;
         }
         .header-content {
@@ -42,7 +42,7 @@
         .nav a {
             margin: 0 20px;
             color: aliceblue;
-            text-decoration: none;
+            text-decoration: none; /* Remove underline */
         }
         .nav a:hover {
             color: yellow;
@@ -52,38 +52,55 @@
             font-size: 18px;
         }
         main {
-            margin-top: 180px; /* Adjusted to include the height of the header */
+            margin-top: 180px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 70px;
             justify-items: center;
-            align-items: center;
+            align-items: start;
             padding: 70px;
         }
         .out {
-            position: relative;
-            text-align: center;
             width: 300px;
-            height: 250px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative; /* Ensure positioning context for absolute positioning */
         }
-        .in {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 30px;
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 10px;
+        .image-container {
+            position: relative; /* Positioning context for absolute positioning */
+            width: 100%;
+            height: 300px;
         }
-        main img {
+        .out img {
             border-radius: 15px;
             border: 2px solid black;
             width: 100%;
             height: 100%;
             filter: brightness(0.9);
+        }
+        .place-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5); /* Light black background */
+            padding: 10px;
+            color: white; /* White text color */
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            width: 95%;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .in {
+            margin-top: 10px;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            text-align: center; /* Center align the text */
         }
         footer {
             margin-top: 20px;
@@ -108,6 +125,10 @@
             font-size: 16px;
             color: black;
         }
+        /* New style for removing underline from information */
+        .out a {
+            text-decoration: none; /* Remove underline from links in main content */
+        }
     </style>
 </head>
 <body>
@@ -115,7 +136,7 @@
         <div class="header-content">
             <div class="title">Historical Places in India</div>
             <div class="nav">
-                <a href="https://www.thrillophilia.com/historical-places-in-india">Home</a>
+                <a href="#">Home</a> <!-- Change href to "#" for the same page -->
                 <a href="https://traveltriangle.com/blog/famous-historical-places-in-india/">Events</a>
                 <a href="https://www.expedia.co.in/Destinations-In-India-Historic-Hotel.0-0.d80-tHistoricHotel.Hotel-Filter-Destinations">Hotel</a>
                 <a href="https://www.scribd.com/document/526438836/10-historical-monuments-in-India">Photos</a>
@@ -141,87 +162,149 @@
     <main>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Taj_Mahal">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1200px-Taj_Mahal_%28Edited%29.jpeg" alt="Taj Mahal">
-                <div class="in">Taj Mahal</div>
+                <div class="image-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1200px-Taj_Mahal_%28Edited%29.jpeg" alt="Taj Mahal">
+                    <div class="place-name">Taj Mahal</div> <!-- Place name in center and bold -->
+                </div>
+                <div class="in">
+                    <p>The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Agra_Fort">
-                <img src="https://media2.thrillophilia.com/images/photos/000/383/700/original/1651645919_shutterstock_1418802812.jpg?w=753&h=450&dpr=1.0" alt="Agra Fort">
-                <div class="in">Agra Fort</div>
+                <div class="image-container">
+                    <img src="https://media2.thrillophilia.com/images/photos/000/383/700/original/1651645919_shutterstock_1418802812.jpg?w=753&h=450&dpr=1.0" alt="Agra Fort">
+                    <div class="place-name">Agra Fort</div>
+                </div>
+                <div class="in">
+                    <p>The Agra Fort (Qila Agra) is a historical fort in the city of Agra, and also known as Agra's Red Fort. Mughal emperor Humayun was crowned at this fort in 1530.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Red_Fort">
-                <img src="https://cdn.britannica.com/20/189820-050-D650A54D/Red-Fort-Old-Delhi-India.jpg" alt="Red Fort">
-                <div class="in">Red Fort</div>
+                <div class="image-container">
+                    <img src="https://cdn.britannica.com/20/189820-050-D650A54D/Red-Fort-Old-Delhi-India.jpg" alt="Red Fort">
+                    <div class="place-name">Red Fort</div>
+                </div>
+                <div class="in">
+                    <p>The Red Fort or Lal Qila is a historic fort in the Old Delhi neighbourhood of Delhi, India, that historically served as the main residence of the Mughal emperors.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Qutb_Minar">
-                <img src="https://www.thejaipurdialogues.com/wp-content/uploads/2023/01/article-14.jpeg" alt="Qutub Minar">
-                <div class="in">Qutub Minar</div>
+                <div class="image-container">
+                    <img src="https://www.thejaipurdialogues.com/wp-content/uploads/2023/01/article-14.jpeg" alt="Qutub Minar">
+                    <div class="place-name">Qutub Minar</div>
+                </div>
+                <div class="in">
+                    <p>The Qutb Minar, also spelled Qutub Minar and Qutab Minar, is a minaret and "victory tower" that forms part of the Qutb complex, which lies at the site of Delhi's oldest fortified city, Lal Kot, founded by the Tomar Rajputs.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Hawa_Mahal">
-                <img src="https://cdn.britannica.com/25/242225-050-72142DF7/Front-facade-of-Palace-of-the-Winds-Hawa-Mahal-Jaipur-Rajasthan-India.jpg" alt="Hawa Mahal">
-                <div class="in">Hawa Mahal</div>
+                <div class="image-container">
+                    <img src="https://media.istockphoto.com/id/520838006/photo/famous-temples-of-khajuraho.jpg?s=612x612&w=0&k=20&c=Q4YDdXoUpQ6SC5HKv7-P7fzzBL2sS2koRSxvrBoR9SI=" alt="Hawa Mahal">
+                    <div class="place-name">Hawa Mahal</div>
+                </div>
+                <div class="in">
+                    <p>The Hawa Mahal is a palace in the city of Jaipur, Rajasthan, India. Built from red and pink sandstone, it is on the edge of the City Palace, Jaipur, and extends to the Zenana, or women's chambers.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata">
-                <img src="https://media2.thrillophilia.com/images/photos/000/383/705/original/1651647391_shutterstock_1100136929.jpg?w=753&h=450&dpr=1.0" alt="Victoria Memorial">
-                <div class="in">Victoria Memorial</div>
+                <div class="image-container">
+                    <img src="https://media.istockphoto.com/id/520838006/photo/famous-temples-of-khajuraho.jpg?s=612x612&w=0&k=20&c=Q4YDdXoUpQ6SC5HKv7-P7fzzBL2sS2koRSxvrBoR9SI=" alt="Victoria Memorial">
+                    <div class="place-name">Victoria Memorial</div>
+                </div>
+                <div class="in">
+                    <p>The Victoria Memorial is a large marble monument on the Maidan in Central Kolkata, having its entrance on the Queen's Way. It was built between 1906 and 1921 by the British Raj.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments">
-                <img src="https://media2.thrillophilia.com/images/photos/000/383/707/original/1651648001_shutterstock_1364029607.jpg?w=753&h=450&dpr=1.0" alt="Khajuraho Temples">
-                <div class="in">Khajuraho Temples</div>
+                <div class="image-container">
+                    <img src="https://static.toiimg.com/thumb/64665528/Khajuraho-Temples.jpg?width=1200&height=900" alt="Khajuraho Temples">
+                    <div class="place-name">Khajuraho Temples</div>
+                </div>
+                <div class="in">
+                    <p>The Khajuraho Group of Monuments are a group of Hindu and Jain temples in Chhatarpur district, Madhya Pradesh, India. They are a UNESCO World Heritage Site. The temples are famous for their nagara-style architectural symbolism and their erotic sculptures.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/India_Gate">
-                <img src="https://media2.thrillophilia.com/images/photos/000/383/715/original/1651839813_shutterstock_609509006.jpg?w=753&h=450&dpr=1.0" alt="India Gate">
-                <div class="in">India Gate</div>
+                <div class="image-container">
+                    <img src="https://media1.thrillophilia.com/filestore/qm6o0911db6gwm57ygqss1biabyd_new-delhi-india-gate-147623366844-orijgp.jpg" alt="India Gate">
+                    <div class="place-name">India Gate</div>
+                </div>
+                <div class="in">
+                    <p>The India Gate (formerly known as the All India War Memorial) is a war memorial located astride the Rajpath, on the eastern edge of the "ceremonial axis" of New Delhi, formerly called Kingsway.</p>
+                </div>
             </a>
         </div>
         <div class="out">
-            <a href="https://en.wikipedia.org/wiki/Meenakshi_Temple#:~:text=The%20Meenakshi%20Amman%20temple%20is,of%20Chennai%2C%20the%20state%20capital.">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/71/bf/0e/madurai-meenakshi-temple.jpg?w=1200&h=1200&s=1" alt="Meenakshi Temple">
-                <div class="in">Meenakshi Temple</div>
+            <a href="https://en.wikipedia.org/wiki/Meenakshi_Temple">
+                <div class="image-container">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/11/71/bf/0e/madurai-meenakshi-temple.jpg" alt="Meenakshi Temple">
+                    <div class="place-name">Meenakshi Temple</div>
+                </div>
+                <div class="in">
+                    <p>Meenakshi Temple is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India. It is dedicated to Meenakshi, a form of Parvati, and her consort, Sundareshwar, a form of Shiva.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Golden_Temple">
-                <img src="https://indiatrotter.com/wp-content/uploads/2021/06/CD38.jpg" alt="Golden Temple">
-                <div class="in">Golden Temple</div>
+                <div class="image-container">
+                    <img src="https://assets.zeezest.com/blogs/PROD_Banner_1665957055703.jpg" alt="Golden Temple">
+                    <div class="place-name">Golden Temple</div>
+                </div>
+                <div class="in">
+                    <p>The Golden Temple, also known as Harmandir Sahib, meaning "abode of God" or Darbar Sahib, meaning "exalted court", is a gurdwara located in the city of Amritsar, Punjab, India.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Charminar">
-                <img src="https://i.pinimg.com/474x/1f/8f/8e/1f8f8e7bb8e52ce4ed68c74bfd0dd3d4.jpg" alt="Charminar">
-                <div class="in">Charminar</div>
+                <div class="image-container">
+                    <img src="https://holidayszone.in/images/charminar-sightseeing-place.jpg" alt="Charminar">
+                    <div class="place-name">Charminar</div>
+                </div>
+                <div class="in">
+                    <p>The Charminar is a mosque and monument located in Hyderabad, Telangana, India. The structure was built in 1591 by Muhammad Quli Qutb Shahi.</p>
+                </div>
             </a>
         </div>
         <div class="out">
             <a href="https://en.wikipedia.org/wiki/Mysore_Palace">
-                <img src="https://mediaim.expedia.com/destination/9/34469b10ae5e91095fda2aa8c74ddccf.jpg?impolicy=fcrop&w=1040&h=580&q=mediumHigh" alt="Mysore Palace">
-                <div class="in">Mysore Palace</div>
+                <div class="image-container">
+                    <img src="https://miro.medium.com/v2/resize:fit:1000/1*8yg2nTzgV8A8xJkqNnzGuw.jpeg" alt="Mysore Palace">
+                    <div class="place-name">Mysore Palace</div>
+                </div>
+                <div class="in">
+                    <p>Mysore Palace, also known as Amba Vilas Palace, is a historical palace and a royal residence (house) at Mysore in the Indian State of Karnataka. It is the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore.</p>
+                </div>
             </a>
         </div>
     </main>
     <footer>
         <div class="follow-us">
-            <p>Follow Us:</p>
             
-            <i class="fa-brands fa-facebook-f f"></i>
-            <i class="fa-brands fa-instagram"></i>
+            
+            <h1>follow us</h1>
+            
+            <a href="https://www.facebook.com/">
+            <i class="fa-brands fa-facebook fa-flip f"></i></a>
+            
         </div>
-        <div class="credits">
-            Designed and developed by Shravyasri Tanguturi
-        </div>
+      
+            <p>Designed and developed by Shravyasri Tanguturi</p>
     </footer>
 </body>
 </html>
