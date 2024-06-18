@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            width: 100%;
+            background-color: darkblue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Make sure it stays on top */
+            color: aliceblue;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .header-content .title {
+            font-size: 80px;
+            margin: 10px 0;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .nav a {
+            margin: 0 20px;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            color: yellow;
+        }
+        .nav select {
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        main {
+            margin-top: 180px; /* Adjusted to include the height of the header */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 70px;
+            justify-items: center;
+            align-items: center;
+            padding: 70px;
+        }
+        .out {
+            position: relative;
+            text-align: center;
+            width: 300px;
+            height: 250px;
+        }
+        .in {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        main img {
+            border-radius: 15px;
+            border: 2px solid black;
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.9);
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            background-color: burlywood;
+        }
+        .follow-us {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .follow-us p {
+            margin: 0;
+        }
+        .f {
+            color: blue;
+        }
+        .credits {
+            margin-top: 20px;
+            font-size: 16px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="title">Historical Places in India</div>
+            <div class="nav">
+                <a href="https://www.thrillophilia.com/historical-places-in-india">Home</a>
+                <a href="https://traveltriangle.com/blog/famous-historical-places-in-india/">Events</a>
+                <a href="https://www.expedia.co.in/Destinations-In-India-Historic-Hotel.0-0.d80-tHistoricHotel.Hotel-Filter-Destinations">Hotel</a>
+                <a href="https://www.scribd.com/document/526438836/10-historical-monuments-in-India">Photos</a>
+                Search
+                <select>
+                    <option>--NONE--</option>
+                    <option>Taj Mahal</option>
+                    <option>Agra Fort</option>
+                    <option>Red Fort</option>
+                    <option>Qutub Minar</option>
+                    <option>Hawa Mahal</option>
+                    <option>Victoria Memorial</option>
+                    <option>Khajuraho Temples</option>
+                    <option>India Gate</option>
+                    <option>Meenakshi Temple</option>
+                    <option>Golden Temple</option>
+                    <option>Charminar</option>
+                    <option>Mysore Palace</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Taj_Mahal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/1200px-Taj_Mahal_%28Edited%29.jpeg" alt="Taj Mahal">
+                <div class="in">Taj Mahal</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Agra_Fort">
+                <img src="https://media2.thrillophilia.com/images/photos/000/383/700/original/1651645919_shutterstock_1418802812.jpg?w=753&h=450&dpr=1.0" alt="Agra Fort">
+                <div class="in">Agra Fort</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Red_Fort">
+                <img src="https://cdn.britannica.com/20/189820-050-D650A54D/Red-Fort-Old-Delhi-India.jpg" alt="Red Fort">
+                <div class="in">Red Fort</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Qutb_Minar">
+                <img src="https://www.thejaipurdialogues.com/wp-content/uploads/2023/01/article-14.jpeg" alt="Qutub Minar">
+                <div class="in">Qutub Minar</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Hawa_Mahal">
+                <img src="https://cdn.britannica.com/25/242225-050-72142DF7/Front-facade-of-Palace-of-the-Winds-Hawa-Mahal-Jaipur-Rajasthan-India.jpg" alt="Hawa Mahal">
+                <div class="in">Hawa Mahal</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata">
+                <img src="https://media2.thrillophilia.com/images/photos/000/383/705/original/1651647391_shutterstock_1100136929.jpg?w=753&h=450&dpr=1.0" alt="Victoria Memorial">
+                <div class="in">Victoria Memorial</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments">
+                <img src="https://media2.thrillophilia.com/images/photos/000/383/707/original/1651648001_shutterstock_1364029607.jpg?w=753&h=450&dpr=1.0" alt="Khajuraho Temples">
+                <div class="in">Khajuraho Temples</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/India_Gate">
+                <img src="https://media2.thrillophilia.com/images/photos/000/383/715/original/1651839813_shutterstock_609509006.jpg?w=753&h=450&dpr=1.0" alt="India Gate">
+                <div class="in">India Gate</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Meenakshi_Temple#:~:text=The%20Meenakshi%20Amman%20temple%20is,of%20Chennai%2C%20the%20state%20capital.">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/71/bf/0e/madurai-meenakshi-temple.jpg?w=1200&h=1200&s=1" alt="Meenakshi Temple">
+                <div class="in">Meenakshi Temple</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Golden_Temple">
+                <img src="https://indiatrotter.com/wp-content/uploads/2021/06/CD38.jpg" alt="Golden Temple">
+                <div class="in">Golden Temple</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Charminar">
+                <img src="https://i.pinimg.com/474x/1f/8f/8e/1f8f8e7bb8e52ce4ed68c74bfd0dd3d4.jpg" alt="Charminar">
+                <div class="in">Charminar</div>
+            </a>
+        </div>
+        <div class="out">
+            <a href="https://en.wikipedia.org/wiki/Mysore_Palace">
+                <img src="https://mediaim.expedia.com/destination/9/34469b10ae5e91095fda2aa8c74ddccf.jpg?impolicy=fcrop&w=1040&h=580&q=mediumHigh" alt="Mysore Palace">
+                <div class="in">Mysore Palace</div>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="follow-us">
+            <p>Follow Us:</p>
+            
+            <i class="fa-brands fa-facebook-f f"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="credits">
+            Designed and developed by Shravyasri Tanguturi
+        </div>
+    </footer>
+</body>
+</html>
